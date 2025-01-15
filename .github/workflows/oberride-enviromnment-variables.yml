@@ -1,12 +1,12 @@
-# name: Override environment variables
-# on: push
-# env:
-#   EXAMPLE: Definded by workflow level
-# jobs:
-#   print:
-#     runs-on: ubuntu-latest
-#     steps:
-#       - run: echo "${EXAMPLE}"
-#       - env:
-#           EXAMPLE: Definded by step level
-#         run: echo "${EXAMPLE}"
+name: Override environment variables
+on: push
+env:
+  EXAMPLE: Definded by workflow level
+jobs:
+  print:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "${EXAMPLE}"
+      - env:
+          EXAMPLE: Definded by step level
+        run: echo "${EXAMPLE}"
